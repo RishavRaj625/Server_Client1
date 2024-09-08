@@ -3,7 +3,7 @@ import threading
 
 HEADER = 64
 PORT = 5050
-# SERVER = "192.28.168.21"  # we can also add the specific IP addresses or any public IP addresses
+# SERVER = "192.168.29.149"  # we can also add the specific IP addresses or any public IP addresses
 
 SERVER = socket.gethostbyname(socket.gethostname()) # local/ laptop local host IP address
 
