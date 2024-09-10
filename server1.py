@@ -3,12 +3,12 @@ import threading
 
 HEADER = 64
 PORT = 5050
-# SERVER = "192.168.29.149"  # we can also add the specific IP addresses or any public IP addresses
+# SERVER = "192.165.24.141"  # we can also add the specific IP addresses or any public IP addresses
 
 SERVER = socket.gethostbyname(socket.gethostname()) # local/ laptop local host IP address
 
-# print(socket.gethostname())
-# print(SERVER)
+print(socket.gethostname())
+print(SERVER)
 
 ADDR = (SERVER,PORT)
 FORMAT = 'utf-8'
@@ -29,7 +29,7 @@ def handle_client(conn,addr):
             msg = conn.recv(msg_length).decode(FORMAT)
             
             if msg == DISCONNECT_MESSAGE:
-                connected = False  # or(ya) break
+                connected = False  # or break
                 
             print(f"[{addr}] {msg}")
             # Sending message back to client
